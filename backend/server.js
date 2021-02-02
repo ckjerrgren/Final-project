@@ -52,9 +52,15 @@ app.get('/games', (req, res) => {
 
 app.post('/games', async (req, res) => {
     const game = new Game(req.body)
-    await game.save()
-    res.json(game)
+
+    try{
+        const savedGame = await game.save()
+        res.status(201).json(savedGame)
+    }catch (err) {
+        res.status(400).json({ message: "Please fill out all boxes to build the game", error:err.errors})
+    }
 })
+
 
 // Starting the server 
 app.listen(port, () => {
