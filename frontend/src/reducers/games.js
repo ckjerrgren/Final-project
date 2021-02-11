@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+
+
 export const games = createSlice({
     name: 'games',
     initialState: {
@@ -14,9 +16,8 @@ export const games = createSlice({
         generateGame: (state, action) => {
             state.game = action.payload
         },
-        generateHint: (state, action) => {
-            state.game = action.payload
-        }
+        
+
     }
 })
 

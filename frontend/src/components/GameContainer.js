@@ -6,6 +6,6 @@ export const GameContainer = () => {
     console.log(game)
 
     return (
-        <div>MY GAME {game.directions} </div>
+        <div className="gamewrapper">MY GAME {game.directions} </div>
     )
 }

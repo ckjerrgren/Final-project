@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import { games } from '../reducers/games'
+// import { games } from '../reducers/games'
 import { generateNewGame } from '../reducers/reusable'
 
 export const GameControls = () => {
