@@ -3,7 +3,7 @@ import { games } from './games'
 
 export const generateNewGame = () => {
     return (dispatch) => {
-        fetch('')
+        fetch('http://localhost:8080/games')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
